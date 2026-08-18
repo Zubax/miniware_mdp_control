@@ -3,7 +3,7 @@
 Control paired Miniware MDP-P906 power supplies through a USB-connected MDP-M01.
 
 ```sh
-python3 -m pip install .
+python3 -m pip install miniware-mdp-control
 ```
 
 ## Command line
