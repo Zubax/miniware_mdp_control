@@ -1,6 +1,6 @@
 # Miniware MDP-M01 Python control
 
-[![PyPI version][pypi-badge]][pypi]
+[![PyPI](https://img.shields.io/pypi/v/miniware-mdp-control)](https://pypi.org/project/miniware-mdp-control)
 
 Control paired Miniware MDP-P906 power supplies through a USB-connected MDP-M01.
 
@@ -37,6 +37,3 @@ through Python's documentation tool:
 mdp-control --help
 python3 -m pydoc mdp_control
 ```
-
-[pypi]: https://pypi.org/project/miniware-mdp-control/
-[pypi-badge]: https://img.shields.io/pypi/v/miniware-mdp-control.svg
