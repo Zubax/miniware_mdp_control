@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "miniware-mdp-control"
+version = "0.1.0"
+requires-python = ">=3.12"
+description = "Control Miniware MDP-P906 power supplies through a USB-connected MDP-M01."
+readme = { file = "README.md", content-type = "text/markdown" }
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "Zubax Robotics", email = "pavel.kirienko@zubax.com" }]
+keywords = ["miniware", "mdp-m01", "mdp-p906", "power supply", "serial"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+    "Topic :: System :: Hardware :: Hardware Drivers",
+]
+dependencies = ["pyserial~=3.5"]
+
+[project.scripts]
+mdp-control = "mdp_control:_main"
+
+[project.urls]
+Repository = "https://github.com/Zubax/miniware_mdp_control"
+
+[tool.setuptools]
+py-modules = ["mdp_control"]
+
+[tool.black]
+line-length = 120
+target-version = ["py312"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["mdp_control.py"]
+
+[[tool.mypy.overrides]]
+module = ["serial", "serial.*"]
+ignore_missing_imports = true
